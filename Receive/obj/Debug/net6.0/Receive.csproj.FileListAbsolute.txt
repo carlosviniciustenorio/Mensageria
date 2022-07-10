@@ -1,0 +1,17 @@
+C:\Projetos\Mensageria\Receive\bin\Debug\net6.0\Receive.exe
+C:\Projetos\Mensageria\Receive\bin\Debug\net6.0\Receive.deps.json
+C:\Projetos\Mensageria\Receive\bin\Debug\net6.0\Receive.runtimeconfig.json
+C:\Projetos\Mensageria\Receive\bin\Debug\net6.0\Receive.dll
+C:\Projetos\Mensageria\Receive\bin\Debug\net6.0\Receive.pdb
+C:\Projetos\Mensageria\Receive\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.csproj.AssemblyReference.cache
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.AssemblyInfoInputs.cache
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.AssemblyInfo.cs
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.csproj.CoreCompileInputs.cache
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.csproj.CopyComplete
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.dll
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\refint\Receive.dll
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.pdb
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\Receive.genruntimeconfig.cache
+C:\Projetos\Mensageria\Receive\obj\Debug\net6.0\ref\Receive.dll
