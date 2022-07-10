@@ -1,0 +1,17 @@
+C:\Projetos\Mensageria\Send\bin\Debug\net6.0\Send.exe
+C:\Projetos\Mensageria\Send\bin\Debug\net6.0\Send.deps.json
+C:\Projetos\Mensageria\Send\bin\Debug\net6.0\Send.runtimeconfig.json
+C:\Projetos\Mensageria\Send\bin\Debug\net6.0\Send.dll
+C:\Projetos\Mensageria\Send\bin\Debug\net6.0\Send.pdb
+C:\Projetos\Mensageria\Send\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.csproj.AssemblyReference.cache
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.AssemblyInfoInputs.cache
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.AssemblyInfo.cs
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.csproj.CoreCompileInputs.cache
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.csproj.CopyComplete
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.dll
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\refint\Send.dll
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.pdb
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\Send.genruntimeconfig.cache
+C:\Projetos\Mensageria\Send\obj\Debug\net6.0\ref\Send.dll
