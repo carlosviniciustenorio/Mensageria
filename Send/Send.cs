@@ -8,12 +8,12 @@ static void Main(string[] args)
     using (var connection = factory.CreateConnection())
     using (var channel = connection.CreateModel())
     {
-        channel.QueueDeclare("autorizacoes", false, false, false, null);
+        channel.QueueDeclare("work", false, false, false, null);
         string message = GetMessage(args);
 
         var body = Encoding.UTF8.GetBytes(message);
 
-        channel.BasicPublish(exchange: "", routingKey: "autorizacoes", basicProperties: null, body: body);
+        channel.BasicPublish(exchange: "", routingKey: "work", basicProperties: null, body: body);
         Console.WriteLine("[X] Sent {0}", message);
     }
 }
