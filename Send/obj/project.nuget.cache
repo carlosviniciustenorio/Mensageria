@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u8RAnp3aNTWuS/IIjfx6iMOeBzgMJw7/adGLnchzuQ/2G2h08gqeDvlpjyyImja5Vrj0y1PJ3lWkg7/K3IOn2A==",
+  "dgSpecHash": "8FhQTMx2DMsNjDqGUroGzPq0Bksk2wZKU+NXCk912wXAOjAKmbivq55mDAchwWnzXu33iQn7klBDL1h8+C1pJg==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\Mensageria\\Send\\Send.csproj",
+  "projectFilePath": "C:\\projetos\\mensageria\\send\\Send.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

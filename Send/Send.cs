@@ -7,7 +7,7 @@ var factory = new ConnectionFactory() { HostName = "localhost", UserName = "carl
 using (var connection = factory.CreateConnection())
 using (var channel = connection.CreateModel())
 {
-    string[] arg = { "First message.", "Second message..", "Third message...", "Fourth message....", "Fifth message....." };
+    string[] arg = { "Message acknowledgment ....." };
     channel.QueueDeclare("work", false, false, false, null);
     string message = GetMessage(arg);
 

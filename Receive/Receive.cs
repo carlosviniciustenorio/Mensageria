@@ -4,7 +4,7 @@ using System;
 using System.Text;
 using System.Threading;
 
-var factory = new ConnectionFactory() { HostName = "localhost"};
+var factory = new ConnectionFactory() { HostName = "localhost", UserName = "carlos.tenorio", Password = "passwordtenorio" };
 using (var connection = factory.CreateConnection())
 using (var channel = connection.CreateModel())
 {
@@ -20,9 +20,11 @@ using (var channel = connection.CreateModel())
         Thread.Sleep(dots * 1000);
 
         Console.WriteLine(" [x] Done");
+
+        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
     };
 
-    channel.BasicConsume("work", true, consumer);
+    channel.BasicConsume(queue:"work", autoAck: false, consumer: consumer);
     Console.WriteLine(" Press [enter] to exit.");
     Console.ReadLine();
 }
