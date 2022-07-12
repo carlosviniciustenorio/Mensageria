@@ -8,7 +8,11 @@ var factory = new ConnectionFactory() { HostName = "localhost", UserName = "carl
 using (var connection = factory.CreateConnection())
 using (var channel = connection.CreateModel())
 {
-    channel.QueueDeclare("work", false, false, false, null);
+    channel.QueueDeclare(queue: "work",
+                         durable: true, //Com o parâmetro durável = true, talvez o RabbitMQ grave as mensagens no disco e caso o servidor pare, a mensagem e a fila não serão apagadas. Isso traz mais garantia que não perderemos uma mensagem.
+                         exclusive: false, 
+                         autoDelete: false, 
+                         arguments: null);
 
     var consumer = new EventingBasicConsumer(channel);
     consumer.Received += (model, ea) =>
@@ -21,10 +25,11 @@ using (var channel = connection.CreateModel())
 
         Console.WriteLine(" [x] Done");
 
-        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false); //BasicAck confirma que a mensagem foi entregue
     };
 
-    channel.BasicConsume(queue:"work", autoAck: false, consumer: consumer);
+    channel.BasicConsume(queue:"work", autoAck: false, consumer: consumer); //AutoAck como false significa que o RabbitMQ usará o reconhecimento de mensagens manual e
+                                                                            // não perderá as mensagens caso o consumidor seja parado ou contenha algum erro no processamento.
     Console.WriteLine(" Press [enter] to exit.");
     Console.ReadLine();
 }
