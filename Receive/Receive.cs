@@ -4,15 +4,15 @@ using System;
 using System.Text;
 using System.Threading;
 
-var factory = new ConnectionFactory() { HostName = "localhost", UserName = "carlos.tenorio", Password = "passwordtenorio" };
+var factory = new ConnectionFactory() { HostName = "localhost", UserName = "guest", Password = "guest" };
 using (var connection = factory.CreateConnection())
 using (var channel = connection.CreateModel())
 {
-    channel.QueueDeclare(queue: "work",
-                         durable: true, //Com o parâmetro durável = true, talvez o RabbitMQ grave as mensagens no disco e caso o servidor pare, a mensagem e a fila não serão apagadas. Isso traz mais garantia que não perderemos uma mensagem.
-                         exclusive: false, 
-                         autoDelete: false, 
-                         arguments: null);
+    channel.ExchangeDeclare("logs", ExchangeType.Fanout);
+    channel.QueueBind(queue: "work", exchange: "logs", routingKey: "");
+    channel.QueueBind(queue: "logfake", exchange: "logs", routingKey: "");
+
+    Console.WriteLine(" [*] Waiting for logs.");
 
     var consumer = new EventingBasicConsumer(channel);
     consumer.Received += (model, ea) =>
@@ -28,8 +28,14 @@ using (var channel = connection.CreateModel())
         channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false); //BasicAck confirma que a mensagem foi entregue
     };
 
-    channel.BasicConsume(queue:"work", autoAck: false, consumer: consumer); //AutoAck como false significa que o RabbitMQ usará o reconhecimento de mensagens manual e
-                                                                            // não perderá as mensagens caso o consumidor seja parado ou contenha algum erro no processamento.
+    channel.BasicConsume(queue:"work",
+                         autoAck: true, 
+                         consumer: consumer);
+
+    channel.BasicConsume(queue:"logfake",
+                         autoAck: true, 
+                         consumer: consumer);
+
     Console.WriteLine(" Press [enter] to exit.");
     Console.ReadLine();
 }
