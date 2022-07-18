@@ -8,13 +8,13 @@ var factory = new ConnectionFactory() { HostName = "localhost", UserName = "gues
 using (var connection = factory.CreateConnection())
 using (var channel = connection.CreateModel())
 {
-    channel.ExchangeDeclare("direct_logs", ExchangeType.Direct);
-    
-    channel.QueueBind(queue: "fake", exchange: "direct_logs", routingKey: "severity", arguments: null);
+    channel.ExchangeDeclare("direct_logs", ExchangeType.Topic, durable: true);
 
-    channel.QueueBind(queue: "blackLogs",
-                      exchange: "direct_logs",
-                      routingKey: "severity");
+    channel.QueueDeclare(queue: "fakeLog1", durable: true, exclusive: false, autoDelete: false, arguments: null);
+    channel.QueueDeclare(queue: "fakeLog2", durable: true, exclusive: false, autoDelete: false, arguments: null);
+    
+    channel.QueueBind(queue: "fakeLog1", exchange: "direct_logs", routingKey: "severity", arguments: null);
+    channel.QueueBind(queue: "fakeLog2", exchange: "direct_logs", routingKey: "fakeRoutingKey", arguments: null);
 
     Console.WriteLine(" [*] Waiting for messages.");
 
@@ -30,11 +30,13 @@ using (var channel = connection.CreateModel())
         channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple:false);
     };
     
-    channel.BasicConsume(queue:"blackLogs",
+    channel.BasicConsume(queue:"fakeLog1",
                          autoAck: true, 
                          consumer: consumer);
 
-    channel.BasicConsume(queue: "fake", autoAck: true, consumer: consumer);
+    channel.BasicConsume(queue: "fakeLog2",
+                         autoAck: true, 
+                         consumer: consumer);
 
     Console.WriteLine(" Press [enter] to exit.");
     Console.ReadLine();

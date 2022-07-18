@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VOrksL1dJ4ME2X7kz3Qcl0iYKO8ye035fHuArGzIC4JuLlHnTJ+2Dz2ysFBg+0pPP3LDbW1FOvAQgpmRLqqt9Q==",
+  "dgSpecHash": "IoTjmssciJ+ySFCU6YTc5Sh0R47kRSx+0vKbdcZRquapdWiTB86Wa7x1sSmDd/ixbWt6qbU86aqhQYPBM5bUSw==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\mensageria\\receive\\Receive.csproj",
+  "projectFilePath": "C:\\Projetos\\Mensageria\\receive\\Receive.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\rabbitmq.client\\6.4.0\\rabbitmq.client.6.4.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

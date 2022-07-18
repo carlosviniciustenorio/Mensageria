@@ -7,7 +7,7 @@ var factory = new ConnectionFactory() { HostName = "localhost" };
 using(var connection = factory.CreateConnection())
 using(var channel = connection.CreateModel())
 {
-    channel.ExchangeDeclare(exchange:"direct_logs", ExchangeType.Direct);
+    channel.ExchangeDeclare(exchange:"direct_logs", ExchangeType.Topic, durable: true);
 
     var message = GetMessage(args);
     var body = Encoding.UTF8.GetBytes(message);
@@ -25,5 +25,5 @@ Console.ReadLine();
 
 static string GetMessage(string[] args)
 {
-    return ((args.Length > 0) ? string.Join(" ", args) : "Hello World!");
+    return ((args.Length > 0) ? string.Join(" ", args) : "Fake message");
 }

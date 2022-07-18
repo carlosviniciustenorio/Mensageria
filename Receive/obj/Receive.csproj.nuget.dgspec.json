@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\mensageria\\receive\\Receive.csproj": {}
+    "C:\\Projetos\\Mensageria\\receive\\Receive.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\mensageria\\receive\\Receive.csproj": {
+    "C:\\Projetos\\Mensageria\\receive\\Receive.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\mensageria\\receive\\Receive.csproj",
+        "projectUniqueName": "C:\\Projetos\\Mensageria\\receive\\Receive.csproj",
         "projectName": "Receive",
-        "projectPath": "C:\\Projetos\\mensageria\\receive\\Receive.csproj",
+        "projectPath": "C:\\Projetos\\Mensageria\\receive\\Receive.csproj",
         "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\mensageria\\receive\\obj\\",
+        "outputPath": "C:\\Projetos\\Mensageria\\receive\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
