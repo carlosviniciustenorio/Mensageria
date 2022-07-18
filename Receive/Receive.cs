@@ -8,33 +8,33 @@ var factory = new ConnectionFactory() { HostName = "localhost", UserName = "gues
 using (var connection = factory.CreateConnection())
 using (var channel = connection.CreateModel())
 {
-    channel.ExchangeDeclare("logs", ExchangeType.Fanout);
-    channel.QueueBind(queue: "work", exchange: "logs", routingKey: "");
-    channel.QueueBind(queue: "logfake", exchange: "logs", routingKey: "");
+    channel.ExchangeDeclare("direct_logs", ExchangeType.Direct);
+    
+    channel.QueueBind(queue: "fake", exchange: "direct_logs", routingKey: "severity", arguments: null);
 
-    Console.WriteLine(" [*] Waiting for logs.");
+    channel.QueueBind(queue: "blackLogs",
+                      exchange: "direct_logs",
+                      routingKey: "severity");
+
+    Console.WriteLine(" [*] Waiting for messages.");
 
     var consumer = new EventingBasicConsumer(channel);
     consumer.Received += (model, ea) =>
     {
-        var message = Encoding.UTF8.GetString(ea.Body.ToArray());
-        Console.WriteLine(" [x] Received {0}", message);
-        
-        int dots = message.Split('.').Length - 1;
-        Thread.Sleep(dots * 1000);
+        var body = ea.Body.ToArray();
+        var message = Encoding.UTF8.GetString(body);
+        var routingKey = ea.RoutingKey;
+        Console.WriteLine(" [x] Received '{0}':'{1}'",
+                            routingKey, message);
 
-        Console.WriteLine(" [x] Done");
-
-        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false); //BasicAck confirma que a mensagem foi entregue
+        channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple:false);
     };
-
-    channel.BasicConsume(queue:"work",
+    
+    channel.BasicConsume(queue:"blackLogs",
                          autoAck: true, 
                          consumer: consumer);
 
-    channel.BasicConsume(queue:"logfake",
-                         autoAck: true, 
-                         consumer: consumer);
+    channel.BasicConsume(queue: "fake", autoAck: true, consumer: consumer);
 
     Console.WriteLine(" Press [enter] to exit.");
     Console.ReadLine();

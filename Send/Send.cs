@@ -7,15 +7,16 @@ var factory = new ConnectionFactory() { HostName = "localhost" };
 using(var connection = factory.CreateConnection())
 using(var channel = connection.CreateModel())
 {
-    channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
-    channel.QueueDeclare(queue: "logfake", durable: true, exclusive:false, autoDelete: false);
+    channel.ExchangeDeclare(exchange:"direct_logs", ExchangeType.Direct);
 
     var message = GetMessage(args);
     var body = Encoding.UTF8.GetBytes(message);
-    channel.BasicPublish(exchange: "logs",
-                         routingKey: "",
+
+    channel.BasicPublish(exchange: "direct_logs",
+                         routingKey: "severity",
                          basicProperties: null,
                          body: body);
+    
     Console.WriteLine(" [x] Sent {0}", message);
 }
 

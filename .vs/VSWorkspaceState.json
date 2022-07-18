@@ -4,6 +4,6 @@
     "\\Receive",
     "\\Send"
   ],
-  "SelectedNode": "\\Receive\\Receive.cs",
+  "SelectedNode": "\\Receive\\logs_from_rabbit.log",
   "PreviewInSolutionExplorer": false
 }

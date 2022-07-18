@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projetos\\mensageria\\send\\Send.csproj": {}
+    "C:\\Projetos\\Mensageria\\send\\Send.csproj": {}
   },
   "projects": {
-    "C:\\projetos\\mensageria\\send\\Send.csproj": {
+    "C:\\Projetos\\Mensageria\\send\\Send.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\mensageria\\send\\Send.csproj",
+        "projectUniqueName": "C:\\Projetos\\Mensageria\\send\\Send.csproj",
         "projectName": "Send",
-        "projectPath": "C:\\projetos\\mensageria\\send\\Send.csproj",
+        "projectPath": "C:\\Projetos\\Mensageria\\send\\Send.csproj",
         "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\mensageria\\send\\obj\\",
+        "outputPath": "C:\\Projetos\\Mensageria\\send\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
