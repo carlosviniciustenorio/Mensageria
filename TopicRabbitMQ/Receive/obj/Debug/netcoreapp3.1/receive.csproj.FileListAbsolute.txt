@@ -1,0 +1,17 @@
+C:\projetos\mensageria\topicrabbitmq\receive\bin\Debug\netcoreapp3.1\receive.exe
+C:\projetos\mensageria\topicrabbitmq\receive\bin\Debug\netcoreapp3.1\receive.deps.json
+C:\projetos\mensageria\topicrabbitmq\receive\bin\Debug\netcoreapp3.1\receive.runtimeconfig.json
+C:\projetos\mensageria\topicrabbitmq\receive\bin\Debug\netcoreapp3.1\receive.runtimeconfig.dev.json
+C:\projetos\mensageria\topicrabbitmq\receive\bin\Debug\netcoreapp3.1\receive.dll
+C:\projetos\mensageria\topicrabbitmq\receive\bin\Debug\netcoreapp3.1\receive.pdb
+C:\projetos\mensageria\topicrabbitmq\receive\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+C:\projetos\mensageria\topicrabbitmq\receive\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.csproj.AssemblyReference.cache
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.GeneratedMSBuildEditorConfig.editorconfig
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.AssemblyInfoInputs.cache
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.AssemblyInfo.cs
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.csproj.CoreCompileInputs.cache
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.csproj.CopyComplete
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.dll
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.pdb
+C:\projetos\mensageria\topicrabbitmq\receive\obj\Debug\netcoreapp3.1\receive.genruntimeconfig.cache
