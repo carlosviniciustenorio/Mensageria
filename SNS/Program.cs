@@ -11,8 +11,6 @@ public class Program
                                                                awsSecretAccessKey: "",
                                                                region: Amazon.RegionEndpoint.SAEast1);
 
-        var topics = await client.ListTopicsAsync();
-        
         var request = new PublishRequest { Message = message, TopicArn = ""};
 
         try
