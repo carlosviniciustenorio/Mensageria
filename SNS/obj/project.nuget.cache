@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "CsHNnPDPlVgcK9VBKi7CuTleY7e+elctyiuWv7TTHU9yTQD8BCBP5JINlKylIw8Us5JK06zXCEX7lqJLhIH3fw==",
+  "success": true,
+  "projectFilePath": "C:\\Projetos\\Mensageria\\SNS\\SNS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\carlo\\.nuget\\packages\\awssdk.core\\3.7.12.22\\awssdk.core.3.7.12.22.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\awssdk.simplenotificationservice\\3.7.3.93\\awssdk.simplenotificationservice.3.7.3.93.nupkg.sha512"
+  ],
+  "logs": []
+}
