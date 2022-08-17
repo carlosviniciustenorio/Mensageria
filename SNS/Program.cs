@@ -5,7 +5,7 @@ public class Program
 {
     static async Task Main(string[] args)
     {
-        string message = "Oi, momo. Estou te mandando esse SMS através da aplicação que criei para fazer notificação. Te amo, denguinho!";
+        string message = "Teste Amazon SNS";
 
         var client = new AmazonSimpleNotificationServiceClient(awsAccessKeyId: "",
                                                                awsSecretAccessKey: "",
