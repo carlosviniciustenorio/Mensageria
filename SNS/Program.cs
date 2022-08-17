@@ -13,7 +13,7 @@ public class Program
 
         var topics = await client.ListTopicsAsync();
         
-        var request = new PublishRequest { Message = message, TopicArn = "arn:aws:sns:sa-east-1:841371166667:MyTopic"};
+        var request = new PublishRequest { Message = message, TopicArn = ""};
 
         try
         {
