@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projetos\\mensageria\\kafka\\kafkaapplication\\KafkaApplication.csproj": {}
+    "C:\\Projetos\\Mensageria\\Kafka\\kafkaapplication\\KafkaApplication.csproj": {}
   },
   "projects": {
-    "C:\\projetos\\mensageria\\kafka\\kafkaapplication\\KafkaApplication.csproj": {
+    "C:\\Projetos\\Mensageria\\Kafka\\kafkaapplication\\KafkaApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projetos\\mensageria\\kafka\\kafkaapplication\\KafkaApplication.csproj",
+        "projectUniqueName": "C:\\Projetos\\Mensageria\\Kafka\\kafkaapplication\\KafkaApplication.csproj",
         "projectName": "KafkaApplication",
-        "projectPath": "C:\\projetos\\mensageria\\kafka\\kafkaapplication\\KafkaApplication.csproj",
+        "projectPath": "C:\\Projetos\\Mensageria\\Kafka\\kafkaapplication\\KafkaApplication.csproj",
         "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
-        "outputPath": "C:\\projetos\\mensageria\\kafka\\kafkaapplication\\obj\\",
+        "outputPath": "C:\\Projetos\\Mensageria\\Kafka\\kafkaapplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

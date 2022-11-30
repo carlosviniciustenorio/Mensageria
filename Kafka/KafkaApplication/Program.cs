@@ -1,4 +1,6 @@
-﻿using Confluent.Kafka;
+﻿using System.Text.Json;
+using Confluent.Kafka;
+using KafkaApplication;
 using Serilog;
 
 class Program
@@ -8,21 +10,9 @@ class Program
         var logger = new LoggerConfiguration()
             .WriteTo.Console()
             .CreateLogger();
-        logger.Information("Testando o envio de mensagens com Kafka");
-
-        if (args.Length < 3)
-        {
-            logger.Error(
-                "Informe ao menos 3 parâmetros: " +
-                "no primeiro o IP/porta para testes com o Kafka, " +
-                "no segundo o Topic que receberá a mensagem, " +
-                "já no terceito em diante as mensagens a serem " +
-                "enviadas a um Topic no Kafka...");
-            return;
-        }
-
-        string bootstrapServers = args[0];
-        string topicName = args[1];
+        
+        string bootstrapServers = "localhost:9092";
+        string topicName = "products-ecommerce";
 
         logger.Information($"BootstrapServers = {bootstrapServers}");
         logger.Information($"Topic = {topicName}");
@@ -36,17 +26,16 @@ class Program
 
             using (var producer = new ProducerBuilder<Null, string>(config).Build())
             {
-                for (int i = 2; i < args.Length; i++)
-                {
+                    Product productToSend = new(){Id = Guid.NewGuid(), Name = "Product to Topic", Description = Guid.NewGuid().ToString()};
+                    var objToSend = JsonSerializer.Serialize(productToSend);
                     var result = await producer.ProduceAsync(
                         topicName,
                         new Message<Null, string>
-                        { Value = args[i] });
+                        { Value = objToSend });
 
                     logger.Information(
-                        $"Mensagem: {args[i]} | " +
+                        $"Mensagem: {objToSend} | " +
                         $"Status: {result.Status.ToString()}");
-                }
             }
 
             logger.Information("Concluído o envio de mensagens");

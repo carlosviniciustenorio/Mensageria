@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sV3vQmiSKLj1Bg55ymBeIJI5tZK2l4Q+eg4SD8cHaFfJ65L831qp0kGfWQ5s4vPg3I2cd5PoCsQFPTCtGmICAw==",
+  "dgSpecHash": "QfV0LFBe6uSuwM/Ure7ThbHW/hgJIbq2/8n3lcOBj2FKGZlbI3AFSj/2CYuW+Yr447k2m1btCxn7cSewZ+bOAQ==",
   "success": true,
-  "projectFilePath": "C:\\projetos\\mensageria\\kafka\\kafkaapplication\\KafkaApplication.csproj",
+  "projectFilePath": "C:\\Projetos\\Mensageria\\Kafka\\kafkaapplication\\KafkaApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\carlo\\.nuget\\packages\\confluent.kafka\\1.4.0\\confluent.kafka.1.4.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\librdkafka.redist\\1.4.0\\librdkafka.redist.1.4.0.nupkg.sha512",
