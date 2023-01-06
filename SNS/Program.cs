@@ -5,10 +5,10 @@ public class Program
 {
     static async Task Main(string[] args)
     {
-        string message = "De todo nosso coração, estamos convidando você para ser nossa madrinha de casamento. Aceita? <3 -- Carlos & Isabelly";
+        string message = "Message to SNS";
 
-        var client = new AmazonSimpleNotificationServiceClient(awsAccessKeyId: "AKIA4HZNBE7FYRJQYNPG",
-                                                               awsSecretAccessKey: "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",
+        var client = new AmazonSimpleNotificationServiceClient(awsAccessKeyId: "",
+                                                               awsSecretAccessKey: "",
                                                                region: Amazon.RegionEndpoint.SAEast1);
 
         var request = new PublishRequest { Message = message, TopicArn = "arn:aws:sns:sa-east-1:841371166667:SMSTopic" };
